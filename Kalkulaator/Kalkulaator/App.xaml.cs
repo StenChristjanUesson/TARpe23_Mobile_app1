@@ -4,6 +4,8 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using ViewModels;
+
 namespace Kalkulaator
 {
     public partial class App : Application
@@ -27,7 +29,7 @@ namespace Kalkulaator
                         });
             #endif
 
-            MainPage = new AppShell();
+            MainPage = new KalkulaatoriLeht();
         }
     }
 }

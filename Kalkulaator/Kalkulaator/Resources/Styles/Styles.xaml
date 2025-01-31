@@ -52,7 +52,7 @@
         <Setter Property="FortAutoScalingEnable" Value="False"/>
     </Style>
 
-    <Style TargetType="Button" x:Key="ScientificOperatorButtonStle">
+    <Style TargetType="Button" x:Key="ScientificOperatorButtonStyle">
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontFamily" Value="RegularFont"/>
         <Setter Property="TextColor" Value="White"/>
