@@ -46,7 +46,7 @@ namespace ViewModels
             }
             catch (Exception ex) { throw; };
 
-        };
+        }
 
         private string NormalizeInputString()
         {

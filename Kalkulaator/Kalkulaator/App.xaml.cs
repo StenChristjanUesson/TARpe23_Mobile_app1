@@ -5,6 +5,7 @@ using Windows.Graphics;
 #endif
 
 using ViewModels;
+using Views;
 
 namespace Kalkulaator
 {
