@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.KalkulaatoriLeht"
-             Title="KalkulaatoriLeht">
+             Title="CalculatorPage">
+
     <Grid
-        RowDefinitions = "*,68,48,44,44,48,64,64,64,64"
-        ColumnDefinitions = "*,*,*,*,*">
+        RowDefinitions="*,68,48,44,44,48,64,64,64,64"
+        ColumnDefinitions="*,*,*,*,*">
 
         <!--Color Answer Row-->
         <BoxView
@@ -15,6 +16,7 @@
             Grid.Row="1"
             Grid.ColumnSpan="5"/>
 
+        <!--Input Area-->
         <Frame
             HasShadow="False"
             Padding="6,0,4,0"
@@ -28,8 +30,8 @@
             Grid.ColumnSpan="5">
             <Label
                 LineHeight="1.5"
-                VerticalOptions="Center"
-                VerticalTextAlignment="Center">
+                VerticalTextAlignment="Center"
+                VerticalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{Binding InputText}" Style="{StaticResource InputBoxLabelStyle}"/>
@@ -71,7 +73,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="MEAN"/>
+            Text="MEAN">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="2"
@@ -79,7 +90,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="MOD"/>
+            Text="MOD">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="2"
@@ -87,7 +107,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="STD"/>
+            Text="STD">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="2"
@@ -95,7 +124,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="VAR"/>
+            Text="VAR">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="2"
@@ -103,7 +141,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="FACT"/>
+            Text="FACT">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <!--Row 2-->
         <Button
@@ -112,9 +159,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="SIN"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="SIN"/>
+            Text="SIN">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="3"
@@ -122,9 +176,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="COS"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="COS"/>
+            Text="COS">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="3"
@@ -132,19 +193,33 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="TAN"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="TAN"/>
-        
+            Text="TAN">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
         <Button
             Grid.Row="3"
             Grid.Column="3"
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="LOG"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="LOG"/>
+            Text="LOG">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="3"
@@ -152,9 +227,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="EXP"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="EXP"/>
+            Text="EXP">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <!--Row 3-->
         <Button
@@ -163,9 +245,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ASIN"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ASIN"/>
+            Text="ASIN">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="4"
@@ -173,9 +262,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ACOS"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ACOS"/>
+            Text="ACOS">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="4"
@@ -183,9 +279,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ATAN"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ATAN"/>
+            Text="ATAN">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="4"
@@ -193,9 +296,16 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="LOG10"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="LOG10"/>
+            Text="PI">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
         <Button
             Grid.Row="4"
@@ -203,59 +313,448 @@
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="POW"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="POW"/>
+            Text="LN">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
 
-        <!--Row 3-->
-        <Button
-            Grid.Row="5"
+                <!--Row 4-->
+                <Button
+            Grid.Row="4"
             Grid.Column="0"
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="SQRT"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="SQRT"/>
-        
-        <Button
-            Grid.Row="5"
+            Text="1">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#3a464f"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+
+                <Button
+            Grid.Row="4"
             Grid.Column="1"
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="ABS"
-            Command="{Binding ScientificOperatorCommand}"
-            CommandParameter="ABS"/>
+            Text="2">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#3a464f"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
 
-        <Button
-            Grid.Row="5"
+                <Button
+            Grid.Row="4"
             Grid.Column="2"
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text=","
-            Command="{Binding RegionOperatorCommand}"
-            CommandParameter=","/>
+            Text="3">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#3a464f"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
 
-        <Button
-            Grid.Row="5"
+                <Button
+            Grid.Row="4"
             Grid.Column="3"
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text="("
-            Command="{Binding RegionOperatorCommand}"
-            CommandParameter="("/>
+            Text="-">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#3a464f"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
 
-        <Button
-            Grid.Row="5"
+                <Button
+            Grid.Row="4"
             Grid.Column="4"
             ZIndex="1"
             Margin="6,10,6,4"
             Style="{StaticResource ScientificOperatorButtonStyle}"
-            Text=")"
-            Command="{Binding RegionOperatorCommand}"
-            CommandParameter=")"/>
-    </Grid>
+            Text="+">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#3a464f"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+
+
+                <!--Row 5-->
+        <Button
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="7">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="8">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="9">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="5"
+                    Grid.Column="3"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="*">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="5"
+                    Grid.Column="4"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="/">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <!--Row 6-->
+        <Button
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="4">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="5">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="6">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="6"
+                    Grid.Column="3"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="-">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="6"
+                    Grid.Column="4"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="+">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <!--Row 7-->
+        <Button
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="1">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="2">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="7"
+                    Grid.Column="2"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="3">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="7"
+                    Grid.Column="3"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="0">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="7"
+                    Grid.Column="4"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text=".">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <!--Row 8-->
+        <Button
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="C">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="DEL">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="8"
+                    Grid.Column="2"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="=">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button
+                    Grid.Row="8"
+                    Grid.Column="3"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="EXIT">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <!--Row 9-->
+        <Button
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    ZIndex="1"
+                    Margin="6,10,6,4"
+                    Style="{StaticResource ScientificOperatorButtonStyle}"
+                    Text="CLEAR">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsMouseOver, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#3a464f"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsPressed, Source={x:Reference self}}" Value="True">
+                    <Setter Property="BackgroundColor" Value="#2f3d47"/>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+
+</Grid>
 </ContentPage>
