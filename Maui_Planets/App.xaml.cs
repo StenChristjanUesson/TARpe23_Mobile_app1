@@ -12,6 +12,9 @@ namespace Maui_Planets
         {
             InitializeComponent();
 
+            const int WindowWidth = 540;
+            const int WindowHeight = 1200;
+
             Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (handler, view) =>
             {
                 #if WINDOWS

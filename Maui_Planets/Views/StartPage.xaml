@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Maui_Planets.Views.StartPage"
+             x:Class="Views.StartPage"
              Title="StartPage">
+
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#666" Offset="0.0"/>
@@ -12,7 +13,7 @@
 
     <Grid>
         <!--Planets image-->
-        <Image
+        <Image 
             x:Name="imgEarth"
             Opacity="0"
             Source="earth.png"
@@ -23,18 +24,18 @@
             WidthRequest="96"
             HeightRequest="96"/>
 
-        <Image
+        <Image 
             x:Name="imgJupiter"
             Opacity="0"
             Source="jupiter.png"
-            VerticalOptions="Start"
-            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HorizontalOptions="Start"
             TranslationX="-100"
             TranslationY="-64"
             WidthRequest="200"
             HeightRequest="200"/>
-        
-        <Image
+
+        <Image 
             x:Name="imgSaturn"
             Opacity="0"
             Source="saturn.png"
@@ -44,8 +45,8 @@
             TranslationY="76"
             WidthRequest="300"
             HeightRequest="300"/>
-        
-        <Image
+
+        <Image 
             x:Name="imgMars"
             Opacity="0"
             Source="mars.png"
@@ -55,8 +56,8 @@
             TranslationY="96"
             WidthRequest="140"
             HeightRequest="140"/>
-        
-        <Image
+
+        <Image 
             x:Name="imgMercury"
             Opacity="0"
             Source="mercury.png"
@@ -64,10 +65,10 @@
             HorizontalOptions="Center"
             TranslationX="18"
             TranslationY="72"
-            WidthRequest="300"
-            HeightRequest="300"/>
+            WidthRequest="66"
+            HeightRequest="66"/>
 
-        <Image
+        <Image 
             x:Name="imgVenus"
             Opacity="0"
             Source="venus.png"
@@ -78,7 +79,7 @@
             WidthRequest="76"
             HeightRequest="76"/>
 
-        <Image
+        <Image 
             x:Name="imgUranus"
             Opacity="0"
             Source="uranus.png"
@@ -88,8 +89,8 @@
             TranslationY="-72"
             WidthRequest="200"
             HeightRequest="200"/>
-        
-        <Image
+
+        <Image 
             x:Name="imgNeptune"
             Opacity="0"
             Source="neptune.png"
@@ -99,8 +100,9 @@
             TranslationY="-72"
             WidthRequest="200"
             HeightRequest="200"/>
-        
-        <!--Intro Box-->
+
+        <!--intro box-->
+
         <Border
             x:Name="imgIntro"
             Opacity="0"
@@ -109,37 +111,37 @@
             Stroke="{StaticResource BorderColor}"
             HorizontalOptions="Fill"
             VerticalOptions="End"
-            Margin="20"
+            Margin="20">
             <Border.StrokeShape>
-            <RoundRectangle CornerRadius="24" />
+                <RoundRectangle CornerRadius="24" />
             </Border.StrokeShape>
 
             <VerticalStackLayout
                 Spacing="16">
-                
-                <Label
+
+                <Label 
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Style="{StaticResource IntroPageHeaderStyle}"
-                    Text="Hello!"/>
+                    Text="Hello!" />
 
                 <Label 
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
                     Style="{StaticResource IntroPageHeaderStyle}"
-                    Text="Want to know everything there is to know about the planets in our solar system."/>
+                    Text="Want to know and explain all things about the planets in the solar system?" />
 
-                <Label
+                <Button 
                     HorizontalOptions="Center"
                     Margin="0,12,0,6"
-                    Style="{StaticResource IntroPageHeaderStyle}"
-                    Text="Explore Now!"
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Explore Now"
                     Clicked="ExploreNow_Clicked"/>
-
             </VerticalStackLayout>
-            
+
         </Border>
 
     </Grid>
+
 </ContentPage>

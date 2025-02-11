@@ -1,9 +1,9 @@
-namespace Maui_Planets.Views;
+namespace Views;
 
 public partial class PlanetsPage : ContentPage
 {
-	public PlanetsPage()
-	{
-		InitializeComponent();
-	}
+    public PlanetsPage()
+    {
+        InitializeComponent();
+    }
 }
