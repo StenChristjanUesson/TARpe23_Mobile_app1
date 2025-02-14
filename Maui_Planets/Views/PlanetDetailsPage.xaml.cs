@@ -10,4 +10,9 @@ public partial class PlanetDetailsPage : ContentPage
 
         this.BindingContext = planet;
     }
+
+	//async void BackButton_Clicked(System.Object, System.EventArgs e)
+	//{
+	//	await 
+	//}
 }
