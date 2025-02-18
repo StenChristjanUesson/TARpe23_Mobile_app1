@@ -108,7 +108,7 @@
                     </Border.StrokeShape>
                     
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="PorfilePic_Clicked" />
+                        <TapGestureRecognizer Tapped="ProfilePic_Clicked" />
                     </Border.GestureRecognizers>
 
                     <Image

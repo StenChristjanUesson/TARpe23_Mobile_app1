@@ -167,6 +167,81 @@ namespace Services
                     "https://solarsystem.nasa.gov/system/feature_items/images/84_neptune_carousel_2.jpg"
                 }
             },
+            new()
+            {
+                Name = "Ceres",
+                Subtitle = "The Quiet Dwarf Planet",
+                HeroImage = "ceres.png",
+                Description = "Ceres is a fascinating dwarf planet tucked away in the asteroid belt, " +
+                "between Mars and Jupiter. It's like a frozen world of mystery, " +
+                "with a surface full of bright salty spots and hints of water hiding beneath. " +
+                "Once thought to be a planet, Ceres now holds its own as the largest object in the asteroid belt, " +
+                "offering up clues about what might be lurking in the distant reaches of our solar system. " +
+                "It's a quirky little world that keeps scientists guessing!",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://upload.wikimedia.org/wikipedia/commons/7/76/Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29_%28cropped%29.jpg",
+                    "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41550-024-02316-6/MediaObjects/41550_2024_2316_Fig1_HTML.png"
+                }
+            },
+            new()
+            {
+                Name = "Pluto",
+                Subtitle = "The Mysterious Dwarf Planet",
+                HeroImage = "",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                }
+            },
+            new()
+            {
+                Name = "Haumea",
+                Subtitle = "The Elongated Dwarf Planet",
+                HeroImage = "",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                }
+            },
+            new()
+            {
+                Name = "Makemake",
+                Subtitle = "The Distant Dwarf Planet",
+                HeroImage = "",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                }
+            },
+            new()
+            {
+                Name = "Eris",
+                Subtitle = "The Frozen Dwarf Planet",
+                HeroImage = "",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                }
+            },
         };
 
         public static List<Planet> GetFeaturedPlanets()
