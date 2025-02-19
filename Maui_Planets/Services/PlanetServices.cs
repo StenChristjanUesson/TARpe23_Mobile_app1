@@ -178,8 +178,8 @@ namespace Services
                 "Once thought to be a planet, Ceres now holds its own as the largest object in the asteroid belt, " +
                 "offering up clues about what might be lurking in the distant reaches of our solar system. " +
                 "It's a quirky little world that keeps scientists guessing!",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                AccentColorStart = Color.FromArgb("#8b99a8"),
+                AccentColorEnd = Color.FromArgb("#2F3D4A"),
                 Images = new()
                 {
                     "https://upload.wikimedia.org/wikipedia/commons/7/76/Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29_%28cropped%29.jpg",
@@ -190,10 +190,13 @@ namespace Services
             {
                 Name = "Pluto",
                 Subtitle = "The Mysterious Dwarf Planet",
-                HeroImage = "",
-                Description = "",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                HeroImage = "Pluto.png",
+                Description = "Pluto is a small, icy world with a surface full of mystery and contrasts. " +
+                "Its reddish-brown hues and icy plains give it a rugged, distant charm, " +
+                "while its quirky orbit and unique features makes it " +
+                "one of the most intriguing objects in the outer solar system.",
+                AccentColorStart = Color.FromArgb("#975746"),
+                AccentColorEnd = Color.FromArgb("#502D27"),
                 Images = new()
                 {
                     "",
@@ -204,10 +207,13 @@ namespace Services
             {
                 Name = "Haumea",
                 Subtitle = "The Elongated Dwarf Planet",
-                HeroImage = "",
-                Description = "",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                HeroImage = "Haumea.png",
+                Description = "Haumea is a fast-spinning, egg-shaped dwarf planet with a frosty, " +
+                "icy surface. Its unique elongated form and pale, icy hues give it a cool, " +
+                "otherworldly vibe, reflecting the distant, " +
+                "mysterious nature of the outer solar system.",
+                AccentColorStart = Color.FromArgb("#AABED2"),
+                AccentColorEnd = Color.FromArgb("#5F6E82"),
                 Images = new()
                 {
                     "",
@@ -218,10 +224,13 @@ namespace Services
             {
                 Name = "Makemake",
                 Subtitle = "The Distant Dwarf Planet",
-                HeroImage = "",
-                Description = "",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                HeroImage = "Makemake.png",
+                Description = "Makemake is a cold, distant dwarf planet with a surface " +
+                "that's a mix of icy frost and reddish-brown hues. " +
+                "Far out in the solar system, it holds a quiet, mysterious beauty, " +
+                "blending earthy tones with the chill of the outer reaches.",
+                AccentColorStart = Color.FromArgb("#9E5E44"),
+                AccentColorEnd = Color.FromArgb("#533324"),
                 Images = new()
                 {
                     "",
@@ -232,10 +241,14 @@ namespace Services
             {
                 Name = "Eris",
                 Subtitle = "The Frozen Dwarf Planet",
-                HeroImage = "",
-                Description = "",
-                AccentColorStart = Color.FromArgb("#0c293d"),
-                AccentColorEnd = Color.FromArgb("#26abe0"),
+                HeroImage = "Eris.png",
+                Description = "Eris is a distant and mysterious dwarf planet, " +
+                "draped in icy, rocky surfaces with a hint of reddish-brown. " +
+                "It’s a world far from the Sun, where shadowed, " +
+                "dark hues blend with subtle hints of warmth, " +
+                "creating a unique and cool vibe in the outer solar system.",
+                AccentColorStart = Color.FromArgb("#8A6B5F"),
+                AccentColorEnd = Color.FromArgb("#3C2D27"),
                 Images = new()
                 {
                     "",
