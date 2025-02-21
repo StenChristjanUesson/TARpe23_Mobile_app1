@@ -9,12 +9,14 @@ namespace Models
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
+
         public Product Clone() => MemberwiseClone() as Product;
+
         public (bool IsValid, string? ErrorMessage) Validate()
         {
             if (string.IsNullOrWhiteSpace(Name))
             {
-                return(false, $"{nameof(Name)} is required.");
+                return (false, $"{nameof(Name)} is required.");
             }
             else if(Price <= 0)
             {

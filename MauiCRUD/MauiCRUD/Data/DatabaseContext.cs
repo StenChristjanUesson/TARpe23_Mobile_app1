@@ -1,8 +1,6 @@
 ﻿using SQLite;
-using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
+
 
 namespace Data
 {
@@ -16,7 +14,6 @@ namespace Data
         private SQLiteAsyncConnection Database =>
             (_connection ??= new SQLiteAsyncConnection(DbPath,
                 SQLiteOpenFlags.Create | SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.SharedCache));
-
 
         public async Task<IEnumerable<TTable>> GetAllAsync<TTable>() where TTable : class, new()
         {
@@ -35,15 +32,15 @@ namespace Data
             await Database.CreateTableAsync<TTable>();
         }
 
-        public async Task<TResult> Execute<TTable, TResult>(Func<Task<TResult>> action) where TTable : class, new()
+        private async Task<TResult> Execute<TTable, TResult>(Func<Task<TResult>> action) where TTable : class, new()
         {
             await CreateTableIfNotExists<TTable>();
             return await action();
         }
 
-        public async Task<TTable> GetItemByKeyAsync<TTable>(object PrimaryKey) where TTable : class, new()
+        public async Task<TTable> GetItemByKeyAsync<TTable>(object primaryKey) where TTable : class, new()
         {
-            return await Execute<TTable, TTable>(async () => await Database.GetAsync<TTable>(PrimaryKey));
+            return await Execute<TTable, TTable>(async () => await Database.GetAsync<TTable>(primaryKey));
         }
 
         public async Task<bool> AddItemAsync<TTable>(TTable item) where TTable : class, new()
@@ -71,14 +68,10 @@ namespace Data
 
         public async ValueTask DisposeAsync() => await _connection.CloseAsync();
 
-        public async Task<IEnumerable<TTable>> GetFilteredAsync<TTable>(Expression<Func<TTable, bool>> predicate) where TTable : class, new()
+        public async Task<IEnumerable<TTable>> GetFilteredAsync<TTable>(Expression<Func<TTable, bool>> predicate) where TTable: class, new()
         {
             var table = await GetTableAsync<TTable>();
             return await table.Where(predicate).ToListAsync();
         }
-
-
-
-
     }
 }
