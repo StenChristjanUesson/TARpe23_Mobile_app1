@@ -190,7 +190,7 @@ namespace Services
             {
                 Name = "Pluto",
                 Subtitle = "The Mysterious Dwarf Planet",
-                HeroImage = "Pluto.png",
+                HeroImage = "Pluto.jpg",
                 Description = "Pluto is a small, icy world with a surface full of mystery and contrasts. " +
                 "Its reddish-brown hues and icy plains give it a rugged, distant charm, " +
                 "while its quirky orbit and unique features makes it " +
@@ -199,8 +199,8 @@ namespace Services
                 AccentColorEnd = Color.FromArgb("#502D27"),
                 Images = new()
                 {
-                    "",
-                    "",
+                    "https://images.newscientist.com/wp-content/uploads/2016/03/p_color2_enhanced_release_black_smaller.jpg?crop=1:1,smart&width=1200&height=1200&upscale=true",
+                    "https://cff2.earth.com/uploads/2024/05/23193331/pluto_vast-hidden-ocean_surface_1m.jpg"
                 }
             },
             new()
@@ -216,15 +216,15 @@ namespace Services
                 AccentColorEnd = Color.FromArgb("#5F6E82"),
                 Images = new()
                 {
-                    "",
-                    "",
+                    "https://i.natgeofe.com/n/fb94ecdc-c10e-4c2e-bbdd-1c549ada89a3/01-ring-dwarf-planet-haumea-neptune.jpg",
+                    "https://science.nasa.gov/wp-content/uploads/2023/07/haumea-480x320-1-jpg.webp?w=320"
                 }
             },
             new()
             {
                 Name = "Makemake",
                 Subtitle = "The Distant Dwarf Planet",
-                HeroImage = "Makemake.png",
+                HeroImage = "makemake.png",
                 Description = "Makemake is a cold, distant dwarf planet with a surface " +
                 "that's a mix of icy frost and reddish-brown hues. " +
                 "Far out in the solar system, it holds a quiet, mysterious beauty, " +
@@ -233,15 +233,15 @@ namespace Services
                 AccentColorEnd = Color.FromArgb("#533324"),
                 Images = new()
                 {
-                    "",
-                    "",
+                    "https://cdn.mos.cms.futurecdn.net/8QBGiy9BhmttKdGeAAZpn8.jpg",
+                    "https://science.nasa.gov/wp-content/uploads/2023/04/makemakemoon100mile-jpg.webp?w=2000"
                 }
             },
             new()
             {
                 Name = "Eris",
                 Subtitle = "The Frozen Dwarf Planet",
-                HeroImage = "Eris.png",
+                HeroImage = "Eris.jpg",
                 Description = "Eris is a distant and mysterious dwarf planet, " +
                 "draped in icy, rocky surfaces with a hint of reddish-brown. " +
                 "It’s a world far from the Sun, where shadowed, " +
@@ -251,8 +251,8 @@ namespace Services
                 AccentColorEnd = Color.FromArgb("#3C2D27"),
                 Images = new()
                 {
-                    "",
-                    "",
+                    "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/internal_resources/3256/Artists_c_oncept_of_Eris_and_Dysnomia_far_from_the_Sun.jpeg?w=800&h=600&fit=clip&crop=faces%2Cfocalpoint",
+                    "https://cdn.britannica.com/18/127118-050-346C260E/Eris-right-artist-Sun-rendering.jpg"
                 }
             },
         };
