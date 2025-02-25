@@ -1,5 +1,4 @@
-﻿using Java.Lang;
-using ViewModels;
+﻿using ViewModels;
 
 namespace MauiCRUD
 {

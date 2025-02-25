@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace Models
 {
     public class Product
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
@@ -18,7 +20,7 @@ namespace Models
             {
                 return (false, $"{nameof(Name)} is required.");
             }
-            else if(Price <= 0)
+            else if (Price <= 0)
             {
                 return (false, $"{nameof(Price)} should be greater than 0");
             }

@@ -6,7 +6,7 @@ namespace Data
 {
     public class DatabaseContext
     {
-        private const string DbName = "CRUDdb3";
+        private const string DbName = "CRUDdb4";
         private static string DbPath => Path.Combine(".", DbName);
 
         private SQLiteAsyncConnection _connection;
@@ -68,7 +68,7 @@ namespace Data
 
         public async ValueTask DisposeAsync() => await _connection.CloseAsync();
 
-        public async Task<IEnumerable<TTable>> GetFilteredAsync<TTable>(Expression<Func<TTable, bool>> predicate) where TTable: class, new()
+        public async Task<IEnumerable<TTable>> GetFilteredAsync<TTable>(Expression<Func<TTable, bool>> predicate) where TTable : class, new()
         {
             var table = await GetTableAsync<TTable>();
             return await table.Where(predicate).ToListAsync();
