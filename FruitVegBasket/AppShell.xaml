@@ -9,6 +9,7 @@
     xmlns:pages="clr-namespace:FruitVegBasket.Pages"
     Shell.TabBarBackgroundColor="{StaticResource Mid}"
     Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.TabBarForegroundColor="{StaticResource White}"
     Shell.BackgroundColor="{StaticResource Mid}">
 
     <Shell.Behaviors>
@@ -21,7 +22,7 @@
         Route="MainPage" />-->
     <TabBar>
         <ShellContent Title="Home"
-                      Icon="bxs_home"
+                      Icon="bx_home_alt"
                       ContentTemplate="{DataTemplate pages:HomePage}"
                       Route="HomePage"/>
         <ShellContent Title="Categories"
@@ -29,7 +30,7 @@
                       ContentTemplate="{DataTemplate pages:CategoriesPage}"
                       Route="CategoriesPage"/>
         <ShellContent Title="Orders"
-                      Icon="bxs_list"
+                      Icon="bx_list_ul"
                       ContentTemplate="{DataTemplate pages:OrdersPage}"
                       Route="OrdersPage"/>
         <ShellContent Title="Profile"
@@ -37,9 +38,8 @@
                       ContentTemplate="{DataTemplate pages:ProfilePage}"
                       Route="ProfilePage"/>
         <ShellContent Title="Help"
-                      Icon="bxs_help"
+                      Icon="bxs_help_circle"
                       ContentTemplate="{DataTemplate pages:HelpPage}"
                       Route="HelpPage"/>
     </TabBar>
-
 </Shell>
