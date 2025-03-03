@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitVegBasket", "FruitVegBasket.csproj", "{AC4EE007-3704-4B59-A935-1CE782CB7A7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitVegBasket.Api", "..\FruitVegBasket.Api\FruitVegBasket.Api.csproj", "{FE78B81A-4621-467D-B039-29BE1138A8D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{AC4EE007-3704-4B59-A935-1CE782CB7A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC4EE007-3704-4B59-A935-1CE782CB7A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC4EE007-3704-4B59-A935-1CE782CB7A7E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
