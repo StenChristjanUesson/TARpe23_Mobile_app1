@@ -11,6 +11,7 @@
     Shell.TabBarTitleColor="{StaticResource White}"
     Shell.TabBarForegroundColor="{StaticResource White}"
     Shell.BackgroundColor="{StaticResource Mid}">
+    <!--Part 4 is complete-->
 
     <Shell.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}" />
