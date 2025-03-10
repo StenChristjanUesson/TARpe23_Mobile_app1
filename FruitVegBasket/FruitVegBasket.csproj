@@ -107,6 +107,10 @@
 		<None Remove="Resources\Images\seasonal_fruits.png" />
 		<None Remove="Resources\Images\vegetables.png" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\FruitVegBasket.Shared\FruitVegBasket.Shared.csproj" />
+	</ItemGroup>
 	
 	<ItemGroup>
 		<MauiXaml Update="Controls\Spacer.xaml">
