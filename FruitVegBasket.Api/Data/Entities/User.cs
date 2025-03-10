@@ -36,10 +36,10 @@ namespace FruitVegBasket.Api.Data.Entities
                 new User
                 {
                     Id = 1,
-                    Name = "Abhay Prince",
-                    Email = "abhayprince@outlok.com",
+                    Name = "Sten Uesson",
+                    Email = "StenUesson@gmail.com",
                     Mobile = "1234567890",
-                    Password = "123456",
+                    Password = "Digifire22",
                     RoleId = DatabaseConstants.Roles.Admin.Id
                 }
             };

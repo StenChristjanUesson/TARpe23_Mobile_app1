@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitVegBasket", "FruitVegBasket.csproj", "{AC4EE007-3704-4B59-A935-1CE782CB7A7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitVegBasket.Api", "..\FruitVegBasket.Api\FruitVegBasket.Api.csproj", "{FE78B81A-4621-467D-B039-29BE1138A8D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitVegBasket.Api", "..\FruitVegBasket.Api\FruitVegBasket.Api.csproj", "{FE78B81A-4621-467D-B039-29BE1138A8D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitVegBasket.Shared", "..\FruitVegBasket.Shared\FruitVegBasket.Shared.csproj", "{961702CF-0CD0-4A95-8424-35C096F0B8A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE78B81A-4621-467D-B039-29BE1138A8D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961702CF-0CD0-4A95-8424-35C096F0B8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961702CF-0CD0-4A95-8424-35C096F0B8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961702CF-0CD0-4A95-8424-35C096F0B8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961702CF-0CD0-4A95-8424-35C096F0B8A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
